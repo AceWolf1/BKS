@@ -1,0 +1,195 @@
+﻿<Window x:Class="BKS.RegWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BKS"
+        mc:Ignorable="d"
+        Title="RegWindow" 
+        Height="700"
+        Width="600"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Background="#FFF9BE50"
+        MouseDown="Window_MouseDown">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="#FF3A89D8" Offset="1"/>
+                <GradientStop Color="#FFFF9226"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <TextBlock  Text="BKS"
+                   Grid.Column="1"
+                   VerticalAlignment="Center" 
+                   HorizontalAlignment="Center"
+                   FontSize="28"
+                   FontWeight="Bold"
+                   Foreground="#2C599D"
+                   />
+        <Image Source="rec/Лого.png" Width="70" Height="70" VerticalAlignment="Bottom" Grid.Row="1" HorizontalAlignment="Center"/>
+        <Image Source="rec/Открыто.png" Grid.Row="2" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="520,40,0,0"/>
+        <Image Source="rec/Ящики.png" Grid.Row="2" Height="142" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="480,210,0,0" Width="120"/>
+        <Image Source="rec/Пиво.png" Grid.Row="2" Height="144" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,26,0,0" Width="115"/>
+        <Image Source="rec/Яблоко.png" Grid.Row="2" Height="99" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,253,0,0" Width="85" RenderTransformOrigin="0.571,0.096"/>
+        <Image Source="rec/Церковь.png" Grid.Row="2" Height="141" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,399,0,0" Width="115"/>
+        <TextBlock  Text="Регистрация"
+                    Grid.Row="2"
+                    VerticalAlignment="Top" 
+                    HorizontalAlignment="Center"
+                    FontSize="18"
+                    Foreground="#2C599D"
+                    FontWeight="Medium"
+                    />
+        <Button x:Name="BtnCloseRegWindow"
+                Style="{StaticResource CloseMinimazeButton}"
+                Click="BtnCloseRegWindow_Click"
+                Cursor="Hand"
+                Grid.Column="2"
+                Grid.Row="0" 
+                Width="20" 
+                Height="20" 
+                BorderThickness="0" 
+                Background="Transparent"
+                Content="X" 
+                FontWeight="Bold"
+                VerticalAlignment="Center" 
+                HorizontalAlignment="Right">
+        </Button>
+        <Button x:Name="CollapseBtnRegWindow"
+               Click="CollapseBtnRegWindow_Click"
+                Content="-" 
+                BorderThickness="0"
+                Background="Transparent" 
+                Style="{StaticResource CloseMinimazeButton}"
+                Grid.Column="2"
+                Grid.Row="0" 
+                Margin="0,-2,20,5" 
+                Width="20"
+                Height="28" 
+                FontSize="24"
+                VerticalAlignment="Center" 
+                HorizontalAlignment="Right" 
+                FontWeight="Bold" >
+        </Button>
+        <StackPanel Grid.Row="2" 
+                    Width="350"
+                    Height="500">
+            <TextBlock  Text="Имя"
+                        Margin="52,0,0,0"
+                        FontFamily="Gill Sans Ultra Bold" 
+                        FontSize="16"
+                        Foreground="#2C599D">
+            </TextBlock>
+            <TextBox x:Name="FirstName" 
+                     Height="35" 
+                     Width="250" 
+                     VerticalContentAlignment="Center" 
+                     HorizontalAlignment="Center"
+                     >
+                <TextBox.Resources>
+                    <Style TargetType="Border" >
+                        <Setter Property="CornerRadius" Value="5" />
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+            <TextBlock  Text="Фамилия"
+                        Margin="52,20,0,0"
+                        FontFamily="Gill Sans Ultra Bold" 
+                        FontSize="16"
+                        Foreground="#2C599D">
+            </TextBlock>
+            <TextBox x:Name="LastName" 
+                     Height="35" 
+                     Width="250" 
+                     VerticalContentAlignment="Center" 
+                     HorizontalAlignment="Center"
+                     >
+                <TextBox.Resources>
+                    <Style TargetType="Border" >
+                        <Setter Property="CornerRadius" Value="5" />
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+            <TextBlock  Text="Отчество"
+                        Margin="52,20,0,0"
+                        FontFamily="Gill Sans Ultra Bold" 
+                        FontSize="16"
+                        Foreground="#2C599D"
+                        >
+            </TextBlock>
+            <TextBox x:Name="Patronymic" 
+                     Height="35" 
+                     Width="250" 
+                     VerticalContentAlignment="Center" 
+                     HorizontalAlignment="Center"
+                     >
+                <TextBox.Resources>
+                    <Style TargetType="Border" >
+                        <Setter Property="CornerRadius" Value="5" />
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+            <TextBlock  Text="Почта"
+                        Margin="52,20,0,0"
+                        FontFamily="Gill Sans Ultra Bold" 
+                        FontSize="16"
+                        Foreground="#2C599D"
+                        >
+            </TextBlock>
+            <TextBox x:Name="Email" 
+                     Height="35" 
+                     Width="250" 
+                     VerticalContentAlignment="Center" 
+                     HorizontalAlignment="Center"
+                     >
+                <TextBox.Resources>
+                    <Style TargetType="Border" >
+                        <Setter Property="CornerRadius" Value="5" />
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+            <TextBlock  Text="Телефон"
+                        Margin="52,20,0,0"
+                        FontFamily="Gill Sans Ultra Bold" 
+                        FontSize="16"
+                        Foreground="#2C599D"
+                        >
+            </TextBlock>
+            <TextBox x:Name="Phone" 
+                     Height="35" 
+                     Width="250" 
+                     VerticalContentAlignment="Center" 
+                     HorizontalAlignment="Center"
+                     >
+                <TextBox.Resources>
+                    <Style TargetType="Border" >
+                        <Setter Property="CornerRadius" Value="5" />
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+            <Button x:Name="Btn_RegRegWindow"
+                    Click="Btn_RegRegWindow_Click"
+                    Width="150"
+                    Height="35"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Margin="0,20,0,0"
+                    Content="Зарегистрироваться!"
+                    >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>
