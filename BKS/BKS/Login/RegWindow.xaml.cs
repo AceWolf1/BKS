@@ -55,6 +55,34 @@ namespace BKS
         {
             
         }
-     
+
+        private void FirstName_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(FirstName.Text))
+            {
+                MessageBox.Show("Поле Имя не заполнено");
+                return;
+            }
+        }
+
+        private void LastName_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Patronymic_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Email_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Phone_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

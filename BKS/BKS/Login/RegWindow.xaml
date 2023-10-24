@@ -82,6 +82,7 @@
                      Width="250" 
                      VerticalContentAlignment="Center" 
                      HorizontalAlignment="Center"
+                     Padding="5" TextChanged="FirstName_TextChanged"
                      >
                 <TextBox.Resources>
                     <Style TargetType="Border" >
@@ -100,6 +101,7 @@
                      Width="250" 
                      VerticalContentAlignment="Center" 
                      HorizontalAlignment="Center"
+                     Padding="5" TextChanged="LastName_TextChanged"
                      >
                 <TextBox.Resources>
                     <Style TargetType="Border" >
@@ -117,11 +119,11 @@
             <TextBox x:Name="Patronymic" 
                      Height="35" 
                      Width="250" 
-                     VerticalContentAlignment="Center" 
-                     HorizontalAlignment="Center"
+                     VerticalContentAlignment="Center"
+                     Padding="5" TextChanged="Patronymic_TextChanged"
                      >
                 <TextBox.Resources>
-                    <Style TargetType="Border" >
+                    <Style TargetType="{x:Type Border}" >
                         <Setter Property="CornerRadius" Value="5" />
                     </Style>
                 </TextBox.Resources>
@@ -138,6 +140,7 @@
                      Width="250" 
                      VerticalContentAlignment="Center" 
                      HorizontalAlignment="Center"
+                     Padding="5" TextChanged="Email_TextChanged"
                      >
                 <TextBox.Resources>
                     <Style TargetType="Border" >
@@ -157,6 +160,7 @@
                      Width="250" 
                      VerticalContentAlignment="Center" 
                      HorizontalAlignment="Center"
+                     Padding="5" TextChanged="Phone_TextChanged"
                      >
                 <TextBox.Resources>
                     <Style TargetType="Border" >
