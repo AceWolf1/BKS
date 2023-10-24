@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ac0fcd15bf624899b9a66a34932a04fd" Name="Diagram1">
+        <EntityTypeShape EntityType="db_StroiMaterials_Subbotin_SushkovModel.Product" Width="1.5" PointX="5.25" PointY="2.625" />
+        <EntityTypeShape EntityType="db_StroiMaterials_Subbotin_SushkovModel.ProductCategory" Width="1.5" PointX="0.75" PointY="3.125" />
+        <EntityTypeShape EntityType="db_StroiMaterials_Subbotin_SushkovModel.ProductSale" Width="1.5" PointX="7.5" PointY="2.875" />
+        <EntityTypeShape EntityType="db_StroiMaterials_Subbotin_SushkovModel.ProductSubCategory" Width="1.5" PointX="3" PointY="3" />
+        <EntityTypeShape EntityType="db_StroiMaterials_Subbotin_SushkovModel.Sales" Width="1.5" PointX="5.25" PointY="7.875" />
+        <EntityTypeShape EntityType="db_StroiMaterials_Subbotin_SushkovModel.Staff" Width="1.5" PointX="3" PointY="7.125" />
+        <EntityTypeShape EntityType="db_StroiMaterials_Subbotin_SushkovModel.StaffPosition" Width="1.5" PointX="0.75" PointY="8" />
+        <EntityTypeShape EntityType="db_StroiMaterials_Subbotin_SushkovModel.Supplier" Width="1.5" PointX="8.25" PointY="7.625" />
+        <EntityTypeShape EntityType="db_StroiMaterials_Subbotin_SushkovModel.SupplyChain" Width="1.5" PointX="10.5" PointY="2.625" />
+        <EntityTypeShape EntityType="db_StroiMaterials_Subbotin_SushkovModel.sysdiagrams" Width="1.5" PointX="10.75" PointY="6.75" />
+        <AssociationConnector Association="db_StroiMaterials_Subbotin_SushkovModel.FK_Product_ProductSubCategory" />
+        <AssociationConnector Association="db_StroiMaterials_Subbotin_SushkovModel.FK_ProductSale_Product" />
+        <AssociationConnector Association="db_StroiMaterials_Subbotin_SushkovModel.FK_SupplyChain_Product" />
+        <AssociationConnector Association="db_StroiMaterials_Subbotin_SushkovModel.FK_ProductSubCategory_ProductCategory" />
+        <AssociationConnector Association="db_StroiMaterials_Subbotin_SushkovModel.FK_ProductSale_Sales" />
+        <AssociationConnector Association="db_StroiMaterials_Subbotin_SushkovModel.FK_Sales_Staff" />
+        <AssociationConnector Association="db_StroiMaterials_Subbotin_SushkovModel.FK_Staff_StaffPosition" />
+        <AssociationConnector Association="db_StroiMaterials_Subbotin_SushkovModel.FK_SupplyChain_Supplier" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -54,5 +54,10 @@ namespace BKS
                 this.MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
             }
         }
+
+        private void StaffMain_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

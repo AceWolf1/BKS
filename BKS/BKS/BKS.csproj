@@ -35,8 +35,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -55,10 +64,62 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="RegWindow.xaml.cs">
+    <Compile Include="ClassHelper\EF.cs" />
+    <Compile Include="DB\Midas.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Midas.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Midas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Midas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Midas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Midas.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Product.cs">
+      <DependentUpon>Midas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\ProductCategory.cs">
+      <DependentUpon>Midas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\ProductSale.cs">
+      <DependentUpon>Midas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\ProductSubCategory.cs">
+      <DependentUpon>Midas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Sales.cs">
+      <DependentUpon>Midas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>Midas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\sp_helpdiagrams_Result.cs">
+      <DependentUpon>Midas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Staff.cs">
+      <DependentUpon>Midas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\StaffPosition.cs">
+      <DependentUpon>Midas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Supplier.cs">
+      <DependentUpon>Midas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\SupplyChain.cs">
+      <DependentUpon>Midas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\sysdiagrams.cs">
+      <DependentUpon>Midas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Login\RegWindow.xaml.cs">
       <DependentUpon>RegWindow.xaml</DependentUpon>
     </Compile>
-    <Page Include="AutoWindow.xaml">
+    <Page Include="Login\AutoWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -70,7 +131,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="AutoWindow.xaml.cs">
+    <Compile Include="Login\AutoWindow.xaml.cs">
       <DependentUpon>AutoWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
@@ -81,7 +142,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="RegWindow.xaml">
+    <Page Include="Login\RegWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -104,6 +165,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="DB\Midas.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Midas.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DB\Midas.edmx.diagram">
+      <DependentUpon>Midas.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -112,22 +181,32 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Resource Include="rec\Лого.png" />
-    <Resource Include="rec\ОранжевыйФон.png" />
-    <Resource Include="rec\Открыто.png" />
-    <Resource Include="rec\Пиво.png" />
-    <Resource Include="rec\СинийФон.jpg" />
-    <Resource Include="rec\Церковь.png" />
-    <Resource Include="rec\Яблоко.png" />
-    <Resource Include="rec\Ящики.png" />
+    <Resource Include="rec\лестница.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="rec\Cansel.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="rec\Close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="rec\Гайка.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DB\Midas.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Midas.Context.cs</LastGenOutput>
+      <DependentUpon>Midas.edmx</DependentUpon>
+    </Content>
+    <Content Include="DB\Midas.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Midas.edmx</DependentUpon>
+      <LastGenOutput>Midas.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
