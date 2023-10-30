@@ -53,21 +53,73 @@ namespace BKS
 
         private void Btn_RegRegWindow_Click(object sender, RoutedEventArgs e)
         {
-            
-        }
-
-        private void FirstName_TextChanged(object sender, TextChangedEventArgs e)
-        {
             if (string.IsNullOrWhiteSpace(FirstName.Text))
             {
                 MessageBox.Show("Поле Имя не заполнено");
                 return;
             }
+            if (string.IsNullOrWhiteSpace(LastName.Text))
+            {
+                MessageBox.Show("Поле Фамилия не заполнено");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(Phone.Text))
+            {
+                MessageBox.Show("Поле Телефон не заполнено");
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(Email.Text))
+            {
+                MessageBox.Show("Поле Email не заполнено");
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(Login.Text))
+            {
+                MessageBox.Show("Поле Логин не заполнено");
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(Password.Text))
+            {
+                MessageBox.Show("Поле Пароль не заполнено");
+                return;
+            }
+
+            DB.Staff addStaff = new DB.Staff();
+
+            addStaff.LastName = LastName.Text;
+            addStaff.FirstName = FirstName.Text;
+            addStaff.Patronumic = Patronymic.Text;
+            addStaff.Phone = Phone.Text;
+            addStaff.Email = Email.Text;
+            addStaff.Login = Login.Text;
+            addStaff.Password = Password.Text;
+
+            if (Patronymic.Text != string.Empty)
+            {
+                addStaff.Patronumic = Patronymic.Text;
+            }
+
+            ClassHelper.EF.Context.Staff.Add(addStaff);
+
+            ClassHelper.EF.Context.SaveChanges();
+
+            MessageBox.Show($"Пользователь {addStaff.LastName} {addStaff.FirstName} успешно добавлен");
+
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Close();
+            
+        }
+
+        private void FirstName_TextChanged(object sender, TextChangedEventArgs e)
+        {
+           
         }
 
         private void LastName_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            
         }
 
         private void Patronymic_TextChanged(object sender, TextChangedEventArgs e)
@@ -77,10 +129,15 @@ namespace BKS
 
         private void Email_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            
         }
 
         private void Phone_TextChanged(object sender, TextChangedEventArgs e)
+        {
+           
+        }
+
+        private void Login_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }

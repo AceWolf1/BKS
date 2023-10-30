@@ -8,6 +8,6 @@ namespace BKS.ClassHelper
 {
     internal class EF
     {
-        public static DB.Entity Context { get; } = new DB.Entity();
+        public static DB.Entity Context { get; set; } = new DB.Entity();
     }
 }

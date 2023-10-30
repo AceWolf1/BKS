@@ -43,21 +43,6 @@ namespace BKS
             WindowState = WindowState.Minimized;
         }
 
-        private void PnlControlBar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-           
-        }
 
-        private void PnlControlBar_MouseEnter(object sender, MouseEventArgs e)
-        {
-            {
-                this.MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
-            }
-        }
-
-        private void StaffMain_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }

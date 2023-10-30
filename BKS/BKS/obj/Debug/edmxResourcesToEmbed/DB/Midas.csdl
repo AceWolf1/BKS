@@ -149,7 +149,7 @@
     <Property Name="Patronumic" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="Phone" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
     <Property Name="Birthday" Type="DateTime" Precision="0" />
-    <Property Name="PositionID" Type="Int32" Nullable="false" />
+    <Property Name="PositionID" Type="Int32" />
     <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="PassNum" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="PassSeries" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
@@ -277,7 +277,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Staff_StaffPosition">
-    <End Type="db_StroiMaterials_Subbotin_SushkovModel.StaffPosition" Role="StaffPosition" Multiplicity="1" />
+    <End Type="db_StroiMaterials_Subbotin_SushkovModel.StaffPosition" Role="StaffPosition" Multiplicity="0..1" />
     <End Type="db_StroiMaterials_Subbotin_SushkovModel.Staff" Role="Staff" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="StaffPosition">

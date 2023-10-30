@@ -26,7 +26,7 @@ namespace BKS.DB
         public string Patronumic { get; set; }
         public string Phone { get; set; }
         public Nullable<System.DateTime> Birthday { get; set; }
-        public int PositionID { get; set; }
+        public Nullable<int> PositionID { get; set; }
         public string Email { get; set; }
         public string PassNum { get; set; }
         public string PassSeries { get; set; }

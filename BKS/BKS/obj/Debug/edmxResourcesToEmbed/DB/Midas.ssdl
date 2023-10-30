@@ -54,7 +54,7 @@
     <Property Name="Patronumic" Type="nvarchar" MaxLength="255" />
     <Property Name="Phone" Type="char" MaxLength="20" />
     <Property Name="Birthday" Type="date" />
-    <Property Name="PositionID" Type="int" Nullable="false" />
+    <Property Name="PositionID" Type="int" />
     <Property Name="Email" Type="nvarchar" MaxLength="50" />
     <Property Name="PassNum" Type="nvarchar" MaxLength="255" />
     <Property Name="PassSeries" Type="nvarchar" MaxLength="255" />
@@ -164,7 +164,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Staff_StaffPosition">
-    <End Role="StaffPosition" Type="Self.StaffPosition" Multiplicity="1" />
+    <End Role="StaffPosition" Type="Self.StaffPosition" Multiplicity="0..1" />
     <End Role="Staff" Type="Self.Staff" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="StaffPosition">

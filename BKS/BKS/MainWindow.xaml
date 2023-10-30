@@ -6,110 +6,33 @@
         xmlns:local="clr-namespace:BKS"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Background="#FF4BAA5D">
-    <Border CornerRadius="20"
-            BorderThickness="2">
 
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <!--NavigationBar-->
-            <Border CornerRadius="18 0 0 18"
-                    Grid.Column="0"
-                    >
-                <Border.BorderBrush>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                        <GradientStop Color="#2d2c2c" Offset="0"/>
-                        <GradientStop Color="#1c1c1c" Offset="1"/>
-                    </LinearGradientBrush>
-                </Border.BorderBrush>
-                <StackPanel Background="#9BBA74" >
-                    <StackPanel Orientation="Horizontal"
-                                Height="35"
-                                Margin="15 25 0 40">
-                        <Image Source="rec/Лого.png" Height="30"/>
-                        <TextBlock Text="Midas"
-                                   Foreground="Wheat"
-                                   FontSize="20"
-                                   Margin="10 0 0 0"
-                                   FontFamily="Arial"
-                                   VerticalAlignment="Center"/>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <Button x:Name="StaffMain" 
-                                Content="Сотрудники" 
-                                Style="{StaticResource secondaryButton}"
-                                Background="Transparent" Click="StaffMain_Click"
-                               
-                                />
-                    </StackPanel>
-                </StackPanel>
-            </Border>
-            <!--MainSection-->
-            <Border CornerRadius="0 18 18 0"
-                    Grid.Column="1"
-                    Margin="-3 0 0 0">
-                <Border.BorderBrush>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                        <GradientStop Color="#262626" Offset="0"/>
-                        <GradientStop Color="#131211" Offset="1"/>
-                    </LinearGradientBrush>
-                </Border.BorderBrush>
-                <Grid Background="#638A55">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="35"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-                    <StackPanel x:Name="pnlControlBar"
-                                Grid.Row="0"
-                                Orientation="Horizontal"
-                                FlowDirection="RightToLeft"
-                                Background="Transparent"
-                                Margin="0 0 5 0"
-                                MouseLeftButtonDown="PnlControlBar_MouseLeftButtonDown"
-                                MouseEnter="PnlControlBar_MouseEnter">
-                        <Button x:Name="BtnClose"
-                                Style="{StaticResource secondaryButton}"
-                                Content="✕"
-                                BorderThickness="0"
-                                FontSize="20"
-                                Background="Transparent"
-                                FontFamily="Roboto"
-                                Cursor="Hand"
-                                Margin="10 0 0 0"
-                                Grid.Column="2"
-                                Click="BtnClose_Click"/>
-                        <Button x:Name="BtnMaximize"
-                                Style="{StaticResource secondaryButton}"
-                                Content="▢"
-                                BorderThickness="0"
-                                FontSize="20"
-                                Background="Transparent"
-                                FontFamily="Roboto"
-                                Margin="10 0 0 0"
-                                Cursor="Hand"
-                                Grid.Column="2"
-                                Click="BtnMaximize_Click"/>
-                        <Button x:Name="BtnMinimize"
-                                Style="{StaticResource secondaryButton}"
-                                Content="─"
-                                BorderThickness="0"
-                                Background="Transparent"
-                                FontSize="20"
-                                Margin="10 0 0 0"
-                                FontFamily="Roboto"
-                                Cursor="Hand"
-                                Grid.Column="1"
-                                Click="BtnMinimize_Click"/>
-                    </StackPanel>
-                    <!--Content Section-->
-                    <Frame x:Name="WindowsFrame"
-                           Margin="20"
-                           Grid.Row="2"
-                           NavigationUIVisibility="Hidden"/>
-                </Grid>
-            </Border>
-        </Grid>
-    </Border>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="109*"/>
+            <ColumnDefinition Width="687*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="57*"/>
+            <RowDefinition Height="373*"/>
+
+        </Grid.RowDefinitions>
+
+        <Image Source="/rec/Гайка.png"/>
+        <TextBlock Text="Midas"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Top"
+                       FontWeight="Bold"
+                       FontSize="24"
+                       Grid.Row="1"
+                       Foreground="#FFF9BE50">
+
+        </TextBlock>
+        <StackPanel Grid.Row="1" Margin="10,55,10,28"/>
+
+
+    </Grid>
+
+
 </Window>

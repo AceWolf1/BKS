@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:BKS"
         mc:Ignorable="d"
         Title="RegWindow" 
-        Height="700"
+        Height="850"
         Width="600"
         WindowStyle="None"
         ResizeMode="NoResize"
@@ -19,13 +19,12 @@
             <RowDefinition Height="70"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <TextBlock  Text="BKS"
-                   Grid.Column="1"
-                   VerticalAlignment="Center" 
+        <TextBlock  Text="Midas"
+                   VerticalAlignment="Top" 
                    HorizontalAlignment="Center"
                    FontSize="28"
                    FontWeight="Bold"
-                   Foreground="#2C599D"
+                  Foreground="#FFF9BE50" Margin="0,6,0,0"
                    />
         <Image Source="/rec/Гайка.png" Width="60" Height="60" VerticalAlignment="Center" Grid.Row="1" HorizontalAlignment="Center"/>
 
@@ -34,7 +33,7 @@
                     VerticalAlignment="Top" 
                     HorizontalAlignment="Center"
                     FontSize="18"
-                    Foreground="#2C599D"
+                    Foreground="#FFF9BE50"
                     FontWeight="Medium"
                     />
         <Button x:Name="BtnCloseRegWindow"
@@ -69,8 +68,7 @@
                 FontWeight="Bold" >
         </Button>
         <StackPanel Grid.Row="2" 
-                    Width="350"
-                    Height="500">
+                    Width="350" Margin="125,40,125,100">
             <TextBlock  Text="Имя"
                         Margin="52,0,0,0"
                         FontFamily="Gill Sans Ultra Bold" 
@@ -161,6 +159,46 @@
                      VerticalContentAlignment="Center" 
                      HorizontalAlignment="Center"
                      Padding="5" TextChanged="Phone_TextChanged"
+                     >
+                <TextBox.Resources>
+                    <Style TargetType="Border" >
+                        <Setter Property="CornerRadius" Value="5" />
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+            <TextBlock  Text="Логин"
+                        Margin="52,20,0,0"
+                        FontFamily="Gill Sans Ultra Bold" 
+                        FontSize="16"
+                        Foreground="#2C599D"
+                        >
+            </TextBlock>
+            <TextBox x:Name="Login" 
+                     Height="35" 
+                     Width="250" 
+                     VerticalContentAlignment="Center" 
+                     HorizontalAlignment="Center"
+                     Padding="5" TextChanged="Login_TextChanged"
+                     >
+                <TextBox.Resources>
+                    <Style TargetType="Border" >
+                        <Setter Property="CornerRadius" Value="5" />
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+            <TextBlock  Text="Пароль"
+                        Margin="52,20,0,0"
+                        FontFamily="Gill Sans Ultra Bold" 
+                        FontSize="16"
+                        Foreground="#2C599D"
+                        >
+            </TextBlock>
+            <TextBox x:Name="Password" 
+                     Height="35" 
+                     Width="250" 
+                     VerticalContentAlignment="Center" 
+                     HorizontalAlignment="Center"
+                     Padding="5" TextChanged="Login_TextChanged"
                      >
                 <TextBox.Resources>
                     <Style TargetType="Border" >
