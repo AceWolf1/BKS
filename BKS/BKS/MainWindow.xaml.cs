@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BKS.Login;
 
 namespace BKS
 {
@@ -43,6 +44,45 @@ namespace BKS
             WindowState = WindowState.Minimized;
         }
 
+        private void Corzina_Click(object sender, RoutedEventArgs e)
+        {
+            CorzinaWindow Corzina = new CorzinaWindow();
+            Corzina.Show();
+            this.Close();
+        }
 
+        private void Product_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CollapseBtnMainWindow_Click(object sender, RoutedEventArgs e)
+        {
+            {
+                WindowState = WindowState.Minimized;
+
+            }
+        }
+
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("Вы действительно хотите выйти?", "Выход", MessageBoxButton.YesNo);
+            if (MessageBoxResult.Yes == result)
+            {
+                Application.Current.Shutdown();
+            }
+            else
+            {
+                MessageBox.Show("Спасибо , что остались! :)");
+            }
+        }
+
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                DragMove();
+            }
+        }
     }
 }

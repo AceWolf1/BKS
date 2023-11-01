@@ -5,20 +5,60 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BKS"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Background="#FF4BAA5D">
+        Title="MainWindow" 
+        Height="450" 
+        Width="800" 
+        Background="#FF4BAA5D"
+        MouseDown="Window_MouseDown"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        >
+
 
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="109*"/>
-            <ColumnDefinition Width="687*"/>
+            <ColumnDefinition Width="119*"/>
+            <ColumnDefinition Width="681*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="57*"/>
-            <RowDefinition Height="373*"/>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="62*"/>
 
         </Grid.RowDefinitions>
-
+        <Button 
+            x:Name="Close"
+            Grid.Column="1"
+            Width="30"
+            Height="30"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            BorderBrush="Transparent"
+            Background="Transparent"
+            BorderThickness="0"
+            Content="x"
+            Style="{StaticResource secondaryButton}"
+            FontWeight="Bold"
+            FontSize="24" Click="Close_Click" Margin="651,0,0,0"
+            >
+        </Button>
+        <Button 
+            x:Name="CollapseBtnMainWindow"
+            Grid.Column="1"
+            Width="30"
+            Height="30"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            BorderBrush="Transparent"
+            Background="Transparent"
+            BorderThickness="0"
+            Content="-"
+            Margin="626,0,0,0"
+            Style="{StaticResource secondaryButton}"
+            FontWeight="Bold"
+            FontSize="24" Click="CollapseBtnMainWindow_Click"
+            >
+        </Button>
         <Image Source="/rec/Гайка.png"/>
         <TextBlock Text="Midas"
                        HorizontalAlignment="Center"
@@ -26,12 +66,108 @@
                        FontWeight="Bold"
                        FontSize="24"
                        Grid.Row="1"
-                       Foreground="#FFF9BE50">
+                       Foreground="#FFF9BE50" Height="31" Width="70">
 
         </TextBlock>
-        <StackPanel Grid.Row="1" Margin="10,55,10,28"/>
+        <StackPanel Grid.Row="1" Margin="10,55,10,28"
+                    >
+            <Button x:Name="Corzina"
+                    Content="Корзина"
+                    BorderThickness="0"
+                    BorderBrush="Transparent"
+                    Style="{StaticResource secondaryButton}" 
+                    Background="Transparent" 
+                    FontSize="18"
+                    Click="Corzina_Click"
+                    HorizontalAlignment="Left"
+                    Cursor="Hand">
+
+            </Button>
+            <Button x:Name="Product"
+                    Content="Товар"
+                    BorderThickness="0"
+                    BorderBrush="Transparent"
+                    Margin="0 20 0 0"
+                    Style="{StaticResource secondaryButton}" 
+                    Background="Transparent" 
+                    Click="Product_Click"
+                    HorizontalAlignment="Left"
+                    FontSize="18"
+                    Cursor="Hand">
 
 
+            </Button>
+            <Button x:Name="Staff"
+                    Content="Сотрудники"
+                    BorderThickness="0"
+                    BorderBrush="Transparent"
+                    Margin="0 20 0 0"
+                    Style="{StaticResource secondaryButton}" 
+                    Background="Transparent" 
+                    Click="Product_Click"
+                    HorizontalAlignment="Left"
+                    FontSize="18"
+                    Cursor="Hand">
+
+
+            </Button>
+        </StackPanel>
+        <Image Source="/rec/Saw.png" Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="31,16,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100"/>
+        <Image Source="/rec/Drill.png" Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="230,16,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100"/>
+        <Image Source="/rec/Hammer.png" Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="448,16,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100"/>
+        <Image Source="/rec/Nails.png" Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="31,200,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100"/>
+        <Image Source="/rec/Tools.png" Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="230,200,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100"/>
+        <Image Source="/rec/Pliers.png" Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="448,200,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100"/>
+
+        <TextBlock Text="Цена : 1500"
+                   Grid.Column="1"  
+                   Grid.Row="1" 
+                   FontSize="16" 
+                   Foreground="Wheat"
+                   Margin="30,120,0,0">
+            
+        </TextBlock>
+
+        <TextBlock Text="Цена : 3500"
+                   Grid.Column="1"  
+                   Grid.Row="1" 
+                   FontSize="16" 
+                   Foreground="Wheat"
+                   Margin="260,120,0,0">
+
+        </TextBlock>
+        <TextBlock Text="Цена : 1000"
+                   Grid.Column="1"  
+                   Grid.Row="1" 
+                   FontSize="16" 
+                   Foreground="Wheat"
+                   Margin="470,120,0,0">
+
+        </TextBlock>
+        <TextBlock Text="Цена : 100"
+                   Grid.Column="1"  
+                   Grid.Row="1" 
+                   FontSize="16" 
+                   Foreground="Wheat"
+                   Margin="30,320,0,0">
+
+        </TextBlock>
+        <TextBlock Text="Цена : 500"
+                   Grid.Column="1"  
+                   Grid.Row="1" 
+                   FontSize="16" 
+                   Foreground="Wheat"
+                   Margin="260,320,0,0">
+
+        </TextBlock>
+        <TextBlock Text="Цена : 1200"
+                   Grid.Column="1"  
+                   Grid.Row="1" 
+                   FontSize="16" 
+                   Foreground="Wheat"
+                   Margin="470,320,0,0">
+
+        </TextBlock>
     </Grid>
 
 

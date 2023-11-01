@@ -116,10 +116,24 @@
     <Compile Include="DB\sysdiagrams.cs">
       <DependentUpon>Midas.tt</DependentUpon>
     </Compile>
+    <Compile Include="Login\CorzinaWindow.xaml.cs">
+      <DependentUpon>CorzinaWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Login\ProductWindow.xaml.cs">
+      <DependentUpon>ProductWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Login\RegWindow.xaml.cs">
       <DependentUpon>RegWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="Login\AutoWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Login\CorzinaWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Login\ProductWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -204,6 +218,13 @@
       <DependentUpon>Midas.edmx</DependentUpon>
       <LastGenOutput>Midas.cs</LastGenOutput>
     </Content>
+    <Resource Include="rec\Pliers.png" />
+    <Resource Include="rec\Tools.png" />
+    <Resource Include="rec\Saw.png" />
+    <Resource Include="rec\Nails.png" />
+    <Resource Include="rec\Hammer.png" />
+    <Resource Include="rec\Drill.png" />
+    <Resource Include="rec\Drel.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

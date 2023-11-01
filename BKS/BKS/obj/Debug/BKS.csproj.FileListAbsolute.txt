@@ -77,3 +77,7 @@ C:\Users\IMac9\Source\Repos\BKS\BKS\BKS\obj\Debug\BKS.csproj.CoreCompileInputs.c
 C:\Users\IMac9\Source\Repos\BKS\BKS\BKS\obj\Debug\BKS.csproj.CopyComplete
 C:\Users\IMac9\Source\Repos\BKS\BKS\BKS\obj\Debug\BKS.exe
 C:\Users\IMac9\Source\Repos\BKS\BKS\BKS\obj\Debug\BKS.pdb
+C:\Users\IMac9\source\repos\BKS\BKS\BKS\obj\Debug\Login\CorzinaWindow.g.cs
+C:\Users\IMac9\source\repos\BKS\BKS\BKS\obj\Debug\Login\CorzinaWindow.baml
+C:\Users\IMac9\source\repos\BKS\BKS\BKS\obj\Debug\Login\ProductWindow.g.cs
+C:\Users\IMac9\source\repos\BKS\BKS\BKS\obj\Debug\Login\ProductWindow.baml
