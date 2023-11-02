@@ -6,7 +6,61 @@
         xmlns:local="clr-namespace:BKS.Login"
         mc:Ignorable="d"
         Title="ProductWindow" Height="450" Width="800">
-    <Grid>
-        
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="797*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <ListView x:Name="Product"
+            ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
+                    ScrollViewer.VerticalScrollBarVisibility="Hidden" BorderBrush="{x:Null}" 
+                    Foreground="Black" 
+                    d:ItemsSource="{d:SampleData ItemCount=1}" 
+                    BorderThickness="1,1,1,1" 
+                    Padding="1,0,0,0" 
+                    UseLayoutRounding="False" 
+                    RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
+            <ListView.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF8AA4AA"/>
+                    <GradientStop Color="#FF94E8FB" Offset="1"/>
+                </LinearGradientBrush>
+            </ListView.Background>
+
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border Height="200" Width="190" 
+                            OpacityMask="{x:Null}" 
+                            BorderBrush="#FFB5B4B4"
+                            BorderThickness="1">
+                        <StackPanel>
+                            <TextBlock Text="Название:" TextWrapping="Wrap" FontSize="15" FontWeight="Bold"/>
+                            <TextBlock x:Name="ttt" Text="{Binding Title}" TextWrapping="Wrap"
+                                       FontSize="15"/>
+                            <TextBlock Text="Цена:" TextWrapping="Wrap" FontSize="15" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding Price}"
+                                       FontSize="15"/>
+                            <TextBlock Text="Описание:" TextWrapping="Wrap" FontSize="15" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding Description}"
+                                       FontSize="15"/>
+
+                            <Button x:Name="AddCart" Click="AddCart_Click"
+                                Height="20" Width="20" HorizontalAlignment="Left" Margin="5,15,0,0" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                                <Button.Background>
+                                    <ImageBrush ImageSource="/rec/add.png"/>
+                                </Button.Background>
+                            </Button>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
+
 </Window>

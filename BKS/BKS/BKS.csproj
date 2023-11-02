@@ -64,7 +64,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ClassHelper\CartClass.cs" />
     <Compile Include="ClassHelper\EF.cs" />
+    <Compile Include="ClassHelper\Quantity.cs" />
     <Compile Include="DB\Midas.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -218,6 +220,9 @@
       <DependentUpon>Midas.edmx</DependentUpon>
       <LastGenOutput>Midas.cs</LastGenOutput>
     </Content>
+    <Resource Include="rec\plus.png" />
+    <Resource Include="rec\del.png" />
+    <Resource Include="rec\add.png" />
     <Resource Include="rec\Pliers.png" />
     <Resource Include="rec\Tools.png" />
     <Resource Include="rec\Saw.png" />

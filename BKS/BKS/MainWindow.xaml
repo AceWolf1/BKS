@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:BKS"
         mc:Ignorable="d"
         Title="MainWindow" 
-        Height="450" 
+        Height="470" 
         Width="800" 
         Background="#FF4BAA5D"
         MouseDown="Window_MouseDown"
@@ -27,7 +27,7 @@
 
         </Grid.RowDefinitions>
         <Button 
-            x:Name="Close"
+            x:Name="CloseMain"
             Grid.Column="1"
             Width="30"
             Height="30"
@@ -124,7 +124,8 @@
                    Grid.Row="1" 
                    FontSize="16" 
                    Foreground="Wheat"
-                   Margin="30,120,0,0">
+                   Margin="30,120,550,225"
+                   TextAlignment="Center" >
             
         </TextBlock>
 
@@ -133,7 +134,7 @@
                    Grid.Row="1" 
                    FontSize="16" 
                    Foreground="Wheat"
-                   Margin="260,120,0,0">
+                   Margin="260,120,326,225">
 
         </TextBlock>
         <TextBlock Text="Цена : 1000"
@@ -141,7 +142,7 @@
                    Grid.Row="1" 
                    FontSize="16" 
                    Foreground="Wheat"
-                   Margin="470,120,0,0">
+                   Margin="470,120,106,225">
 
         </TextBlock>
         <TextBlock Text="Цена : 100"
@@ -149,7 +150,7 @@
                    Grid.Row="1" 
                    FontSize="16" 
                    Foreground="Wheat"
-                   Margin="30,320,0,0">
+                   Margin="30,320,573,43">
 
         </TextBlock>
         <TextBlock Text="Цена : 500"
@@ -157,7 +158,7 @@
                    Grid.Row="1" 
                    FontSize="16" 
                    Foreground="Wheat"
-                   Margin="260,320,0,0">
+                   Margin="260,320,340,43">
 
         </TextBlock>
         <TextBlock Text="Цена : 1200"
@@ -165,9 +166,15 @@
                    Grid.Row="1" 
                    FontSize="16" 
                    Foreground="Wheat"
-                   Margin="470,320,0,0">
+                   Margin="470,320,106,43">
 
         </TextBlock>
+        <Button Grid.Column="1" Grid.Row="1" Width="100" Height="30" Margin="30,147,551,195" x:Name="But1" Click="But1_Click"/>
+        <Button Grid.Column="1" Grid.Row="1" Width="100" Height="30" Margin="251,147,330,195" x:Name="But2" Click="But2_Click"/>
+        <Button Grid.Column="1" Grid.Row="1" Width="100" Height="30" Margin="470,147,111,195" x:Name="But3" Click="But3_Click"/>
+        <Button Grid.Column="1" Grid.Row="1" Width="100" Height="30" Margin="30,351,562,8" x:Name="But4" Click="But4_Click"/>
+        <Button Grid.Column="1" Grid.Row="1" Width="100" Height="30" Margin="251,351,330,8" x:Name="But5" Click="But5_Click"/>
+        <Button Grid.Column="1" Grid.Row="1" Width="100" Height="30" Margin="470,351,111,8" x:Name="But6" Click="But6_Click"/>
     </Grid>
 
 

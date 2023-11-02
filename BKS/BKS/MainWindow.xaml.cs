@@ -53,7 +53,10 @@ namespace BKS
 
         private void Product_Click(object sender, RoutedEventArgs e)
         {
-
+            ProductWindow product = new ProductWindow();
+            product.Show();
+            this.Close();
+           
         }
 
         private void CollapseBtnMainWindow_Click(object sender, RoutedEventArgs e)
@@ -83,6 +86,36 @@ namespace BKS
             {
                 DragMove();
             }
+        }
+
+        private void But1_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void But2_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void But3_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void But4_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void But5_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void But6_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

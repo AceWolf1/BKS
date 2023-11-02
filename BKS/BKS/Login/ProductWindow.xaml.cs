@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using BKS.ClassHelper;
 
 namespace BKS.Login
 {
@@ -22,6 +23,28 @@ namespace BKS.Login
         public ProductWindow()
         {
             InitializeComponent();
+            GetListProduct();
+
+        }
+        public void GetListProduct()
+        {
+
+            Product.ItemsSource = ClassHelper.EF.Context.Product.ToList();
+        }
+
+        private void AddCart_Click(object sender, RoutedEventArgs e)
+        {
+            var button = sender as Button;
+            if (button == null)
+            {
+                return;
+            }
+            var productt = button.DataContext as DB.Product;
+
+            productt.Quantity++;
+            CartClass.prodCart.Add(productt);
+
         }
     }
+
 }
