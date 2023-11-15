@@ -45,6 +45,28 @@ namespace BKS.Login
             CartClass.prodCart.Add(productt);
 
         }
+
+        private void CloseBsk_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+            CorzinaWindow corzinaWindow = new CorzinaWindow();
+            corzinaWindow.Show();
+        }
+
+        private void GoMainWindow_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+        }
+
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                DragMove();
+            }
+        }
     }
 
 }

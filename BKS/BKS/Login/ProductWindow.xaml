@@ -5,10 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BKS.Login"
         mc:Ignorable="d"
-        Title="ProductWindow" Height="450" Width="800">
-    <Grid >
+        Title="ProductWindow" Height="450" Width="800"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        MouseDown="Window_MouseDown">
+    <Grid Background="#FF2E999F" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="198*"/>
+            <RowDefinition Height="19*"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="797*"/>
+            <ColumnDefinition Width="0*"/>
             <ColumnDefinition Width="3*"/>
         </Grid.ColumnDefinitions>
         <ListView x:Name="Product"
@@ -19,11 +28,12 @@
                     BorderThickness="1,1,1,1" 
                     Padding="1,0,0,0" 
                     UseLayoutRounding="False" 
-                    RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
+                    RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="3">
             <ListView.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF8AA4AA"/>
-                    <GradientStop Color="#FF94E8FB" Offset="1"/>
+                    <GradientStop Color="#FF3A8FA2" Offset="1"/>
+                    <GradientStop Color="#FFFFC378" Offset="0"/>
                 </LinearGradientBrush>
             </ListView.Background>
 
@@ -61,6 +71,31 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <Button Content="Зайти в корзину"
+                Grid.Column="0" 
+                VerticalAlignment="Top"
+                x:Name="CloseBsk" 
+                Click="CloseBsk_Click" 
+                
+                HorizontalAlignment="Left" 
+                Grid.Row="2"
+                Width="150"
+                Height="35"
+                Background="#FFA05708"
+                FontFamily="Garamond" 
+                FontWeight="Bold"/>
+        
+        <Button x:Name="GoMainWindow" 
+                VerticalAlignment="Top"
+                Grid.Row="2" 
+                Grid.Column="0" 
+                Width="150"
+                Height="35"
+                Content="Вернуться в главное окно" 
+                Background="#FFA05708"
+                FontFamily="Garamond" 
+                FontWeight="Bold" 
+                HorizontalAlignment="Right" Click="GoMainWindow_Click"/>
     </Grid>
 
 </Window>

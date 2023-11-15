@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="ac0fcd15bf624899b9a66a34932a04fd" Name="Diagram1">
+      <Diagram DiagramId="ac0fcd15bf624899b9a66a34932a04fd" Name="Diagram1" ZoomLevel="74">
         <EntityTypeShape EntityType="db_StroiMaterials_Subbotin_SushkovModel.Product" Width="1.5" PointX="5.25" PointY="2.625" />
         <EntityTypeShape EntityType="db_StroiMaterials_Subbotin_SushkovModel.ProductCategory" Width="1.5" PointX="0.75" PointY="3.125" />
         <EntityTypeShape EntityType="db_StroiMaterials_Subbotin_SushkovModel.ProductSale" Width="1.5" PointX="7.5" PointY="2.875" />

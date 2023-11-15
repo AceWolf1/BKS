@@ -114,7 +114,7 @@
                 FontWeight="Bold" >
 
         </Button>
-        <Image Source="/rec/гайка.png" Grid.Column="1" Grid.Row="1" Width="70" Height="70" VerticalAlignment="Top"/>
+        <Image Source="/rec/лестница.png" Grid.Column="1" Grid.Row="1" Width="70" Height="70" VerticalAlignment="Top"/>
         <StackPanel Grid.Row="1" Grid.Column="1" Margin="0 80 0 0" Width="250">
             <TextBlock Text="Авторизация" 
                        Foreground="#FFF9BE50"

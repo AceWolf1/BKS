@@ -56,7 +56,9 @@ namespace BKS.Login
 
         private void BackBTN_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Hide();
+            ProductWindow productWindow = new ProductWindow();
+            productWindow.Show();
         }
 
         private void PayBtn_Click(object sender, RoutedEventArgs e)

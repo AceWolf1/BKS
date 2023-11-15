@@ -97,20 +97,6 @@
 
 
             </Button>
-            <Button x:Name="Staff"
-                    Content="Сотрудники"
-                    BorderThickness="0"
-                    BorderBrush="Transparent"
-                    Margin="0 20 0 0"
-                    Style="{StaticResource secondaryButton}" 
-                    Background="Transparent" 
-                    Click="Product_Click"
-                    HorizontalAlignment="Left"
-                    FontSize="18"
-                    Cursor="Hand">
-
-
-            </Button>
         </StackPanel>
         <Image Source="/rec/Saw.png" Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="31,16,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100"/>
         <Image Source="/rec/Drill.png" Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="230,16,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100"/>
